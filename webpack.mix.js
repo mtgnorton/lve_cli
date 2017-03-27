@@ -26,3 +26,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .js('resources/assets/admin/admin.js', 'public/js')
    .sass('resources/assets/admin/admin.scss', 'public/css');
+
+mix.browserSync('lvue.com');

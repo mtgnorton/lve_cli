@@ -4,7 +4,7 @@ import Promise from 'promise';
 
 // axios 配置
 axios.defaults.timeout = 5000;
-let base = 'http://jblog.app/api/admin';
+let base = 'http://localhost:3000/api/admin';
 // axios.defaults.baseURL = 'https://api.github.com';
 
 // http request 拦截器
@@ -42,9 +42,9 @@ axios.interceptors.response.use(
                     return error.response;
             }
         }
-        // console.log(JSON.stringify(error));//console : Error: Request failed with status code 402
-        // console.log(Promise.reject(error.response));
-        // console.log(error.response);
+        console.log(JSON.stringify(error));//console : Error: Request failed with status code 402
+        console.log(Promise.reject(error.response));
+        console.log(error.response);
         return Promise.reject(error.response.data)
     }
 );

@@ -24,11 +24,11 @@ const routes = [
         path: '/',
         name: '统计',
         component: require('./views/Home'),
+        iconCls: 'el-icon-message',
         children: [
             {
                 path: '/',
                 component: require('./views/statics/Overview'),
-                iconCls: 'el-icon-message',
                 name: '概览',
                 meta: { requireAuth: true },
             },
@@ -38,11 +38,11 @@ const routes = [
         path: '/',
         name: '配置',
         component: require('./views/Home'),
+         iconCls: 'el-icon-setting',
         children: [
             {
                 path: '/config',
                 name: '站点配置',
-                iconCls: 'el-icon-setting',
                 component: require('./views/config/SiteConfig'),
                 meta: { requireAuth: true },
             }

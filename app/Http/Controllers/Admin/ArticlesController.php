@@ -15,7 +15,7 @@ class ArticlesController extends Controller
         return response()->json($articles);
     }
 
-    public function store()
+    public function store(\JWTAuth $auth)
     {
         $this->validate(request(), [
             'title' => 'required|unique:articles|max:255',
