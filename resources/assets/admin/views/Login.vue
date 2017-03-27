@@ -2,10 +2,10 @@
     <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm card-box loginform">
         <h3 class="title">系统登录</h3>
         <el-form-item prop="account">
-            <el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="账号"></el-input>
+            <el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="账号" value="{ruleForm2.account}"></el-input>
         </el-form-item>
         <el-form-item prop="checkPass">
-            <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off" placeholder="密码"></el-input>
+            <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off" placeholder="密码" value="{ruleForm2.checkPass}"></el-input>
         </el-form-item>
         <el-checkbox v-model="checked" checked style="margin:0px 0px 35px 0px;">记住密码</el-checkbox>
         <el-form-item style="width:100%;">
@@ -58,10 +58,17 @@
                     if(data.success == true){
                         sessionStorage.setItem('token', data.token);
                         sessionStorage.setItem('username', data.username);
-                        this.$message.success('恭喜你，登录成功');
+                            this.$notify({
+                              title: '成功',
+                              message: '登录成功',
+                              type: 'success'
+                            });
                         this.$router.push({ path: '/' });
                     } else {
-                        this.$message.error(data.msg);
+                        this.$notify.error({
+                            title: '错误',
+                            message: data.msg
+                        })
                         sessionStorage.removeItem('token');
                     }
                 });

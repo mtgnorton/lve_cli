@@ -1,5 +1,7 @@
 <template>
+
     <el-form ref="form" :model="form" :rules="rules" label-width="80px" style="margin:20px;width:90%;min-width:600px;">
+
         <el-form-item label="标题" prop="title">
             <el-input v-model="form.title"></el-input>
         </el-form-item>
@@ -47,6 +49,7 @@
                     topics: [],
                     content: '',
                 },
+                checkList:[],
                 loading_publish: false,
                 configs: { // markdownEditor Config
                     autoDownloadFontAwesome: false,

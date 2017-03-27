@@ -21,15 +21,19 @@
             </el-col>
         </el-col>
         <el-col :span="24" class="main">
-            <aside :class="collapsed?'menu-collapsed':'menu-expanded'">
+            <aside :class="collapsed?'menu-collapsed':'menu-expanded'" style="background:#eef1f6">
                 <!--导航菜单-->
                 <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"
                      unique-opened router v-show="!collapsed">
+                     <!-- template无实际意义用于循环 -->
                     <template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
+                        <!-- 子菜单下仍有菜单 -->
                         <el-submenu :index="index+''" v-if="!item.leaf">
+                        <!-- 子菜单名称 -->
                             <template slot="title"><i :class="item.iconCls"></i>{{item.name}}</template>
                             <el-menu-item v-for="child in item.children" :index="child.path" v-if="!child.hidden">{{child.name}}</el-menu-item>
                         </el-submenu>
+                        <!-- 子菜单下无子菜单 -->
                         <el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path"><i :class="item.iconCls"></i>{{item.children[0].name}}</el-menu-item>
                     </template>
                 </el-menu>
@@ -94,9 +98,10 @@
         methods: {
             onSubmit() {
                 console.log('submit!');
+
             },
-            handleopen() {
-                //console.log('handleopen');
+            handleopen(index,indexPath) {
+                console.log(this.$route.matched);
             },
             handleclose() {
                 //console.log('handleclose');
