@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 199);
+/******/ 	return __webpack_require__(__webpack_require__.s = 202);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -375,7 +375,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 101:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -405,7 +405,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -448,12 +448,12 @@ window.axios.defaults.headers.common = {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(30);
-var buildURL = __webpack_require__(33);
-var parseHeaders = __webpack_require__(39);
-var isURLSameOrigin = __webpack_require__(37);
+var settle = __webpack_require__(31);
+var buildURL = __webpack_require__(34);
+var parseHeaders = __webpack_require__(40);
+var isURLSameOrigin = __webpack_require__(38);
 var createError = __webpack_require__(18);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(32);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(33);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -549,7 +549,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(35);
+      var cookies = __webpack_require__(36);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -667,20 +667,20 @@ module.exports = function isCancel(value) {
 
 /***/ }),
 
-/***/ 177:
+/***/ 179:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(3)(
   /* script */
-  __webpack_require__(101),
+  __webpack_require__(102),
   /* template */
-  __webpack_require__(178),
+  __webpack_require__(191),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\xampp7\\htdocs\\lve_cli\\resources\\assets\\js\\components\\Example.vue"
+Component.options.__file = "E:\\xampp\\htdocs\\Jblog\\resources\\assets\\js\\components\\Example.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -691,44 +691,14 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-05991376", Component.options)
+    hotAPI.createRecord("data-v-f52e11f4", Component.options)
   } else {
-    hotAPI.reload("data-v-05991376", Component.options)
+    hotAPI.reload("data-v-f52e11f4", Component.options)
   }
 })()}
 
 module.exports = Component.exports
 
-
-/***/ }),
-
-/***/ 178:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
-  }, [_c('div', {
-    staticClass: "panel panel-default"
-  }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-05991376", module.exports)
-  }
-}
 
 /***/ }),
 
@@ -738,7 +708,7 @@ if (false) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(29);
+var enhanceError = __webpack_require__(30);
 
 /**
  * Create an Error with the specified message, config, error code, and response.
@@ -776,7 +746,44 @@ module.exports = function bind(fn, thisArg) {
 
 /***/ }),
 
-/***/ 199:
+/***/ 191:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-8 col-md-offset-2"
+  }, [_c('div', {
+    staticClass: "panel panel-default"
+  }, [_c('div', {
+    staticClass: "panel-heading"
+  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
+    staticClass: "panel-body"
+  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-f52e11f4", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(25);
+
+/***/ }),
+
+/***/ 202:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(67);
@@ -785,14 +792,7 @@ module.exports = __webpack_require__(68);
 
 /***/ }),
 
-/***/ 20:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(24);
-
-/***/ }),
-
-/***/ 24:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -800,7 +800,7 @@ module.exports = __webpack_require__(24);
 
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(19);
-var Axios = __webpack_require__(26);
+var Axios = __webpack_require__(27);
 var defaults = __webpack_require__(9);
 
 /**
@@ -835,14 +835,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(16);
-axios.CancelToken = __webpack_require__(25);
+axios.CancelToken = __webpack_require__(26);
 axios.isCancel = __webpack_require__(17);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(40);
+axios.spread = __webpack_require__(41);
 
 module.exports = axios;
 
@@ -852,7 +852,7 @@ module.exports.default = axios;
 
 /***/ }),
 
-/***/ 25:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -917,7 +917,7 @@ module.exports = CancelToken;
 
 /***/ }),
 
-/***/ 26:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -925,10 +925,10 @@ module.exports = CancelToken;
 
 var defaults = __webpack_require__(9);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(27);
-var dispatchRequest = __webpack_require__(28);
-var isAbsoluteURL = __webpack_require__(36);
-var combineURLs = __webpack_require__(34);
+var InterceptorManager = __webpack_require__(28);
+var dispatchRequest = __webpack_require__(29);
+var isAbsoluteURL = __webpack_require__(37);
+var combineURLs = __webpack_require__(35);
 
 /**
  * Create a new instance of Axios
@@ -1010,7 +1010,7 @@ module.exports = Axios;
 
 /***/ }),
 
-/***/ 27:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1070,14 +1070,14 @@ module.exports = InterceptorManager;
 
 /***/ }),
 
-/***/ 28:
+/***/ 29:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(31);
+var transformData = __webpack_require__(32);
 var isCancel = __webpack_require__(17);
 var defaults = __webpack_require__(9);
 
@@ -1157,33 +1157,6 @@ module.exports = function dispatchRequest(config) {
 
 /***/ }),
 
-/***/ 29:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Update an Error with the specified config, error code, and response.
- *
- * @param {Error} error The error to update.
- * @param {Object} config The config.
- * @param {string} [code] The error code (for example, 'ECONNABORTED').
- @ @param {Object} [response] The response.
- * @returns {Error} The error.
- */
-module.exports = function enhanceError(error, config, code, response) {
-  error.config = config;
-  if (code) {
-    error.code = code;
-  }
-  error.response = response;
-  return error;
-};
-
-
-/***/ }),
-
 /***/ 3:
 /***/ (function(module, exports) {
 
@@ -1244,6 +1217,33 @@ module.exports = function normalizeComponent (
 "use strict";
 
 
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ @ @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+module.exports = function enhanceError(error, config, code, response) {
+  error.config = config;
+  if (code) {
+    error.code = code;
+  }
+  error.response = response;
+  return error;
+};
+
+
+/***/ }),
+
+/***/ 31:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var createError = __webpack_require__(18);
 
 /**
@@ -1271,7 +1271,7 @@ module.exports = function settle(resolve, reject, response) {
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1299,7 +1299,7 @@ module.exports = function transformData(data, headers, fns) {
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1343,7 +1343,7 @@ module.exports = btoa;
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1419,7 +1419,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 /***/ }),
 
-/***/ 34:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1439,7 +1439,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 /***/ }),
 
-/***/ 35:
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1500,7 +1500,7 @@ module.exports = (
 
 /***/ }),
 
-/***/ 36:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1522,7 +1522,7 @@ module.exports = function isAbsoluteURL(url) {
 
 /***/ }),
 
-/***/ 37:
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1598,7 +1598,7 @@ module.exports = (
 
 /***/ }),
 
-/***/ 38:
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1618,57 +1618,12 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 /***/ }),
 
-/***/ 39:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var utils = __webpack_require__(0);
-
-/**
- * Parse headers into an object
- *
- * ```
- * Date: Wed, 27 Aug 2014 08:58:49 GMT
- * Content-Type: application/json
- * Connection: keep-alive
- * Transfer-Encoding: chunked
- * ```
- *
- * @param {String} headers Headers needing to be parsed
- * @returns {Object} Headers parsed into an object
- */
-module.exports = function parseHeaders(headers) {
-  var parsed = {};
-  var key;
-  var val;
-  var i;
-
-  if (!headers) { return parsed; }
-
-  utils.forEach(headers.split('\n'), function parser(line) {
-    i = line.indexOf(':');
-    key = utils.trim(line.substr(0, i)).toLowerCase();
-    val = utils.trim(line.substr(i + 1));
-
-    if (key) {
-      parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
-    }
-  });
-
-  return parsed;
-};
-
-
-/***/ }),
-
 /***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process, global) {/*!
- * Vue.js v2.2.6
+ * Vue.js v2.2.5
  * (c) 2014-2017 Evan You
  * Released under the MIT License.
  */
@@ -3760,9 +3715,6 @@ function lifecycleMixin (Vue) {
     }
     // call the last hook...
     vm._isDestroyed = true;
-    // invoke destroy hooks on current rendered tree
-    vm.__patch__(vm._vnode, null);
-    // fire destroyed hook
     callHook(vm, 'destroyed');
     // turn off all instance listeners.
     vm.$off();
@@ -3770,8 +3722,8 @@ function lifecycleMixin (Vue) {
     if (vm.$el) {
       vm.$el.__vue__ = null;
     }
-    // remove reference to DOM nodes (prevents leak)
-    vm.$options._parentElm = vm.$options._refElm = null;
+    // invoke destroy hooks on current rendered tree
+    vm.__patch__(vm._vnode, null);
   };
 }
 
@@ -4436,15 +4388,6 @@ function initComputed (vm, computed) {
   for (var key in computed) {
     var userDef = computed[key];
     var getter = typeof userDef === 'function' ? userDef : userDef.get;
-    if (process.env.NODE_ENV !== 'production') {
-      if (getter === undefined) {
-        warn(
-          ("No getter function has been defined for computed property \"" + key + "\"."),
-          vm
-        );
-        getter = noop;
-      }
-    }
     // create internal watcher for the computed property.
     watchers[key] = new Watcher(vm, getter, noop, computedWatcherOptions);
 
@@ -4857,7 +4800,7 @@ function extractProps (data, Ctor, tag) {
         ) {
           tip(
             "Prop \"" + keyInLowerCase + "\" is passed to component " +
-            (formatComponentName(tag || Ctor)) + ", but the declared prop name is" +
+            (formatComponentName(tag || Ctor)) + ", but the delared prop name is" +
             " \"" + key + "\". " +
             "Note that HTML attributes are case-insensitive and camelCased " +
             "props need to use their kebab-case equivalents when using in-DOM " +
@@ -5842,7 +5785,7 @@ Object.defineProperty(Vue$3.prototype, '$isServer', {
   get: isServerRendering
 });
 
-Vue$3.version = '2.2.6';
+Vue$3.version = '2.2.5';
 
 /*  */
 
@@ -10993,6 +10936,51 @@ module.exports = Vue$3;
 /***/ }),
 
 /***/ 40:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(0);
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+module.exports = function parseHeaders(headers) {
+  var parsed = {};
+  var key;
+  var val;
+  var i;
+
+  if (!headers) { return parsed; }
+
+  utils.forEach(headers.split('\n'), function parser(line) {
+    i = line.indexOf(':');
+    key = utils.trim(line.substr(0, i)).toLowerCase();
+    val = utils.trim(line.substr(i + 1));
+
+    if (key) {
+      parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+    }
+  });
+
+  return parsed;
+};
+
+
+/***/ }),
+
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28159,7 +28147,7 @@ module.exports = function(module) {
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(103);
+__webpack_require__(104);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28167,7 +28155,7 @@ __webpack_require__(103);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(177));
+Vue.component('example', __webpack_require__(179));
 
 var app = new Vue({
   el: '#app'
@@ -28404,7 +28392,7 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(38);
+var normalizeHeaderName = __webpack_require__(39);
 
 var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 var DEFAULT_CONTENT_TYPE = {

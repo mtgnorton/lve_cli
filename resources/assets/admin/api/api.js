@@ -63,3 +63,5 @@ export const removeUser = params => { return axios.get(`${base}/user/remove`, { 
 
 export const editUser = params => { return axios.get(`${base}/user/edit`, { params: params }); };
 
+export const getListUser = params => { return axios.get(`${base}/user`, { params: params }); };
+

@@ -31,8 +31,8 @@ Route::get('archives', function() {
 //     $route->get('/', 'HomeController@index');
 // });
 
-Route::get('/cpanel', function() {
-    return view('cpanel');
+Route::get('/admin', function() {
+    return view('admin');
 });
 
 /**

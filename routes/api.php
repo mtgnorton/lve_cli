@@ -27,3 +27,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function() {
     });
 });
 
+$router->group(['namespace' => 'Admin\\System', 'middleware' => 'jwt.auth','prefix'=>'admin'], function () {
+   //用户管理路由
+    Route::resource('/user', 'UserController');
+});

@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router'
 
 import NotFound from './views/404.vue'
-
+import User     from './views/system/User'
 import NProgress from 'nprogress'//页面顶部进度条
 import 'nprogress/nprogress.css'
 
@@ -36,14 +36,20 @@ const routes = [
     },
     {
         path: '/',
-        name: '配置',
+        name: '系统管理',
         component: require('./views/Home'),
          iconCls: 'el-icon-setting',
         children: [
             {
-                path: '/config',
+                path: '/system/config',
                 name: '站点配置',
-                component: require('./views/config/SiteConfig'),
+                component: require('./views/system/SiteConfig'),
+                meta: { requireAuth: true },
+            },
+            {
+                path: '/system/user',
+                name: '用户管理',
+                component: User,
                 meta: { requireAuth: true },
             }
         ]
