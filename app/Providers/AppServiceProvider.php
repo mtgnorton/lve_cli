@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
          Schema::defaultStringLength(191);
+         app('Dingo\Api\Transformer\Factory')->register('User', 'UserTransformer');
         // if ($this->app->environment() !== 'production') {
         //     \DB::listen(function($sql, $bindings, $time) {
         //         \Log::info('[SQL]'.$sql." with: ".join(',', $bindings));

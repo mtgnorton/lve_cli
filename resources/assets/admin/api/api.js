@@ -5,7 +5,6 @@ import Promise from 'promise';
 // axios 配置
 axios.defaults.timeout = 5000;
 let base = 'http://localhost:3000/api/admin';
-// axios.defaults.baseURL = 'https://api.github.com';
 
 // http request 拦截器
 axios.interceptors.request.use(
@@ -65,3 +64,4 @@ export const editUser = params => { return axios.get(`${base}/user/edit`, { para
 
 export const getListUser = params => { return axios.get(`${base}/user`, { params: params }); };
 
+export const getTest = params => { return axios.get(`http://localhost:3000/api/admin/test`, { params: params }); };

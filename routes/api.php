@@ -31,3 +31,10 @@ $router->group(['namespace' => 'Admin\\System', 'middleware' => 'jwt.auth','pref
    //用户管理路由
     Route::resource('/user', 'UserController');
 });
+
+$api = app('Dingo\Api\Routing\Router');
+$api->version('v1', function ($api) {
+$api->group(['namespace' => 'App\Http\Controllers\Api\V1\Admin','prefix'=>'admin','middleware'=>'api.auth'], function ($api) {
+        $api->get('/test', 'TestController@index');
+    });
+});

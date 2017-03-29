@@ -20946,7 +20946,7 @@ module.exports = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_promise__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_promise__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return requestLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return requestLogin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return addArticle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getArticleList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return uploadImage; });
@@ -20954,6 +20954,7 @@ module.exports = __webpack_require__(25);
 /* unused harmony export removeUser */
 /* unused harmony export editUser */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getListUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getTest; });
 
 
 
@@ -20961,7 +20962,6 @@ module.exports = __webpack_require__(25);
 // axios 配置
 __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.timeout = 5000;
 var base = 'http://localhost:3000/api/admin';
-// axios.defaults.baseURL = 'https://api.github.com';
 
 // http request 拦截器
 __WEBPACK_IMPORTED_MODULE_0_axios___default.a.interceptors.request.use(function (config) {
@@ -21031,6 +21031,10 @@ var editUser = function editUser(params) {
 
 var getListUser = function getListUser(params) {
     return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(base + '/user', { params: params });
+};
+
+var getTest = function getTest(params) {
+    return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://localhost:3000/api/admin/test', { params: params });
 };
 
 /***/ }),
@@ -47613,7 +47617,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 email: this.ruleForm2.account,
                 password: this.ruleForm2.checkPass
             };
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__api_api__["e" /* requestLogin */])(loginParams).then(function (data) {
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__api_api__["f" /* requestLogin */])(loginParams).then(function (data) {
                 __WEBPACK_IMPORTED_MODULE_1_nprogress___default.a.done();
 
                 if (data.success == true) {
@@ -47647,7 +47651,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                         email: _this3.ruleForm2.account,
                         password: _this3.ruleForm2.checkPass
                     };
-                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__api_api__["e" /* requestLogin */])(loginParams).then(function (data) {
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__api_api__["f" /* requestLogin */])(loginParams).then(function (data) {
                         _this3.logining = false;
                         __WEBPACK_IMPORTED_MODULE_1_nprogress___default.a.done();
                         var msg = data.msg,
@@ -47952,12 +47956,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api_api__ = __webpack_require__(21);
 //
 //
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__api_api__["e" /* getTest */])().then(function (data) {
+      console.log(data);
+      console.log(data.data.data);
+    });
+  }
+});
 
 /***/ }),
 /* 101 */
