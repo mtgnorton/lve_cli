@@ -13,6 +13,7 @@ class TestController extends BaseController
      */
     public function __construct()
     {
+        
     }
     /**
      * Show the application dashboard.
@@ -22,7 +23,7 @@ class TestController extends BaseController
     public function index()
     {
         $users = User::paginate(2);
-return $this->response->paginator($users, new UserTransformer);
+        return $this->response->paginator($users, new UserTransformer);
        // return $this->response->item($user, new UserTransformer);
 
     }
