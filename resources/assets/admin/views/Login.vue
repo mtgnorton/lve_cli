@@ -23,7 +23,7 @@
             return {
                 logining: false,
                 ruleForm2: {
-                    account: 'admin@admin.com',
+                    account: 'mtg@mtg.com',
                     checkPass: '123456'
                 },
                 rules2: {
@@ -57,6 +57,7 @@
 
                     if(data.success == true){
                         sessionStorage.setItem('token', data.token);
+                        console.log(data.username);
                         sessionStorage.setItem('username', data.username);
                             this.$notify({
                               title: '成功',

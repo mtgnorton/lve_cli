@@ -26,4 +26,8 @@ class Admin extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function articles()
+    {   
+        return $this->hasMany('App\Models\Article','user_id','id');
+    }
 }

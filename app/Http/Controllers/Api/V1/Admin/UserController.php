@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin\System;
+namespace App\Http\Controllers\Api\V1\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin as User;
-class UserController extends Controller
+class UserController extends BaseController
 {
     /**
      * Show the application dashboard.
@@ -13,7 +13,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-
+     
       $pageSize = $request->size;
       $users = User::paginate($pageSize);
       return response()->json($users);

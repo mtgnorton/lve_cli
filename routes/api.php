@@ -13,21 +13,22 @@ use Illuminate\Http\Request;
 |
 */
 
-$router->group(['namespace' => 'Admin\\System', 'middleware' => 'jwt.auth','prefix'=>'admin'], function () {
-   //用户管理路由
-    Route::resource('/user', 'UserController');
-});
-
 
 $api = app('Dingo\Api\Routing\Router');
-$api->version('v1', function ($api) {
-$api->post('/admin/login', '\App\Http\Controllers\Api\V1\Admin\AuthController@login')->name('admin.login');
-$api->group(['namespace' => 'App\Http\Controllers\Api\V1\Admin','prefix'=>'admin','middleware'=>'api.auth'], function ($api) {
-        $api->get('/test', 'TestController@index');
 
+$api->version('v1', function ($api) {
+
+$api->post('/admin/login', '\App\Http\Controllers\Api\V1\Admin\AuthController@login')->name('admin.login');
+//前台登陆
+// $api->post('/admin/login', '\App\Http\Controllers\Api\V1\Admin\FrontedLoginController@login')->middleware('jwt.auth:fronted');
+//'middleware'=>'jwt.auth:admin'
+$api->group(['namespace' => 'App\Http\Controllers\Api\V1\Admin','prefix'=>'admin'], function ($api) {
+        $api->get('/test/{id}', 'TestController@test');
+
+        $api->resource('/user', 'UserController');
 
         $api->get('/articles', 'ArticlesController@index');
         $api->post('/articles', 'ArticlesController@store');
-        $api->post('/images/upload', 'ImagesController@store');
+        // $api->post('/images/upload', 'ImagesController@store');
     });
 });

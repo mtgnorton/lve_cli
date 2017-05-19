@@ -7,7 +7,15 @@ use App\Http\Requests;
 use League\Fractal\TransformerAbstract;
 
 class UserTransformer extends TransformerAbstract
-{
+{  
+
+
+   // protected $defaultIncludes = [
+   //      'article'
+   //  ];
+      protected $availableIncludes = [
+        'article'
+    ];
     public function transform(User $user)
     {
         return [
@@ -15,5 +23,11 @@ class UserTransformer extends TransformerAbstract
             'name' => $user->name,
             'email' => $user->email,
         ];
+    }
+    public function includeArticle(User $user)
+    {
+      $article = $user->articles()->first();
+
+      return $this->item($article,new ArticleTransformer);
     }
 }

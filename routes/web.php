@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/fronted');
 });
 
 Route::get('/posts', function() {
@@ -34,7 +34,9 @@ Route::get('archives', function() {
 Route::get('/admin', function() {
     return view('admin');
 });
-
+Route::get('/fronted', function() {
+    return view('fronted');
+});
 /**
  * Admin
  */
